@@ -1,0 +1,14 @@
+//Write a program to generate unique random numbers between two given numbers without using math.random()
+
+#include <cstdlib>
+#include<iostream>
+int main()
+{
+int a,b,c; //a & b are starting and ending numbers and c is the number of random numbers to be generated
+cin>>a>>b;
+for(int i=1;i<=c;i++)
+{
+if(a<=srand(time(0)) && b>=srand(time(0)))
+cout<<rand(); //output random numbers between  a & b
+}
+}

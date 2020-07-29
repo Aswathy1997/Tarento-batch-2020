@@ -1,0 +1,44 @@
+//Accept a String input
+// Accept a String of valid chars
+//Remove all the characters that are not present in the valid chars from the input string
+// Print the cleansed String and the count of characters removed
+
+
+#include<iostream>
+#include<string>
+int main()
+{
+int count=0,c=0;
+string str1;
+getline(cin,str1); //taking string input str1
+string str2;
+getline(cin,str2); //taking valid string input str2
+string str3;
+string str4;
+for(std::string::iterartor
+i=str1.begin();i!=str1.end();i++) //check whether each string literal is valid or not
+{
+ for(std::string::iterartor
+ j=str2.begin();j!=str2.end();j++)
+ {
+ if(*i==*j)
+ count++; //count increment if character in str1 is a valid one
+ }
+if(count==1)
+str3+=*i; //str3 returns a string after removing the invalid characters in str1 
+else
+str4+=*i; //str4 return a string of invalid characters
+}
+cout<<str3<<"\n";
+for(std::string::iterartor
+i1=str4.begin();i1!=str4.end();i1++) //count the number of each invalid character in str4
+{
+ for(std::string::iterartor
+ j1=str4.begin();j1!=str4.end();j1++)
+ {
+ if(*i1==*j1)
+ c++;
+ }
+ cout<<c<<" "<<*i1<<" was removed\n";
+}
+}
